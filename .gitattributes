@@ -1,0 +1,14 @@
+# 统一换行符: 测评脚本与 Go 源码一律用 LF
+#
+# 本仓库的 tests/run_tests.sh 需要在 Linux(CI/判题机)上执行, 如果以 CRLF 入库,
+# 判题环境里可能出现 `bash: $'\r': command not found` 之类的错误。
+# 这里显式声明为 LF, 避免 core.autocrlf=true(Windows 常见配置)造成的换行符问题。
+
+* text=auto eol=lf
+
+*.sh   text eol=lf
+*.go   text eol=lf
+*.mod  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.md   text eol=lf

@@ -1,0 +1,22 @@
+name: 自动测评
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  grade:
+    name: 猜数小游戏 自动测评
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: 运行测评脚本
+        run: bash tests/run_tests.sh --games 2 --no-color
