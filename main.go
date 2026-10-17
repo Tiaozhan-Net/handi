@@ -21,6 +21,6 @@ func main() {
 		if a == b {
 			break
 		}
-		fmt.Printf("共猜了 %d 次\n", c)
 	}
+	fmt.Printf("共猜了 %d 次\n", c)
 }
