@@ -22,5 +22,5 @@ func main() {
 			break
 		}
 	}
-	fmt.Printf("共猜了 %d 次\n", c)
+	fmt.Printf("使用 %d 次猜中\n", c)
 }
