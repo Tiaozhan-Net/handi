@@ -8,8 +8,9 @@ import (
 func main() {
 	a := rand.Intn(101)
 	var b, c int
-	for c = 1; a != b; c++ {
+	for {
 		fmt.Scanln(&b)
+		c++
 		if a > b {
 			fmt.Println("猜小了")
 		} else if a < b {
@@ -17,6 +18,9 @@ func main() {
 		} else {
 			fmt.Println("胜利")
 		}
+		fmt.Printf("共猜了 %d 次\n", c)
+		if a == b {
+			break
+		}
 	}
-	fmt.Printf("使用 %d 次猜中\n", c)
 }
