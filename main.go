@@ -18,9 +18,9 @@ func main() {
 		} else {
 			fmt.Println("胜利")
 		}
-		fmt.Printf("共猜了 %d 次\n", c)
 		if a == b {
 			break
 		}
+		fmt.Printf("共猜了 %d 次\n", c)
 	}
 }
